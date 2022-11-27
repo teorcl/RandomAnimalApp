@@ -9,6 +9,11 @@ import UIKit
 
 class RateViewController: UIViewController {
     
+    private struct Const {
+        static let invalidValue = "Valor no permitido"
+        static let invalidRate = "Calificación inválida"
+    }
+    
     @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var rateTextField: UITextField!
     
@@ -22,7 +27,7 @@ class RateViewController: UIViewController {
     private func rateAnimal(){
         let value = rateTextField.text ?? ""
         guard let rate = Int(value) else {
-            messageLabel.text = "No es una calificación númerica"
+            messageLabel.text = Const.invalidValue
             isHidden = false
             return
         }
@@ -33,7 +38,7 @@ class RateViewController: UIViewController {
         }else{
             isHidden = false
         }
-        messageLabel.text = "Calificación no válida"
+        messageLabel.text = Const.invalidRate
     }
     
 }
