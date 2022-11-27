@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -15,16 +16,130 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="8cf-bb-VDt">
+                                <rect key="frame" x="60" y="179" width="273" height="227"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ixm-xe-jLx">
+                                        <rect key="frame" x="0.0" y="0.0" width="273" height="200"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="cUV-Kc-E28"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OCr-ev-7Nx">
+                                        <rect key="frame" x="0.0" y="205" width="273" height="22"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mcJ-Ri-lBd">
+                                <rect key="frame" x="80" y="456" width="233" height="40"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="3hE-Vc-XUh"/>
+                                </constraints>
+                                <buttonConfiguration key="configuration" style="plain" title="Dar puntuación">
+                                    <fontDescription key="titleFontDescription" name="Impact" family="Impact" pointSize="20"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="o41-lf-XdD" kind="presentation" modalPresentationStyle="fullScreen" id="p8y-mQ-6yN"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="mcJ-Ri-lBd" firstAttribute="top" secondItem="8cf-bb-VDt" secondAttribute="bottom" constant="50" id="Iqd-nu-mKE"/>
+                            <constraint firstItem="mcJ-Ri-lBd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="80" id="Pgc-9h-6Lf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8cf-bb-VDt" secondAttribute="trailing" constant="60" id="UCX-Au-fXZ"/>
+                            <constraint firstItem="8cf-bb-VDt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="Ywg-1O-jNz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mcJ-Ri-lBd" secondAttribute="trailing" constant="80" id="jkC-eP-itV"/>
+                            <constraint firstItem="8cf-bb-VDt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="120" id="rv5-Yh-Wax"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="animalImageView" destination="ixm-xe-jLx" id="ner-ro-lAt"/>
+                        <outlet property="animalLabel" destination="OCr-ev-7Nx" id="Vpu-8Y-Q68"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="132" y="-27"/>
         </scene>
+        <!--Rate View Controller-->
+        <scene sceneID="LRi-tO-6tg">
+            <objects>
+                <viewController id="o41-lf-XdD" customClass="RateViewController" customModule="RandomAnimalApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="s8j-gv-2Pe">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ci2-yD-PMo">
+                                <rect key="frame" x="90" y="253.00000000000003" width="213" height="34.333333333333343"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Calificar">
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onRateButtonPressed:" destination="o41-lf-XdD" eventType="touchUpInside" id="ocr-vq-akQ"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="TXe-gR-Ock">
+                                <rect key="frame" x="60" y="179" width="273" height="34"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Calificar" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q23-6a-asj">
+                                        <rect key="frame" x="0.0" y="0.0" width="273" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r0B-Ze-LqX">
+                                        <rect key="frame" x="0.0" y="0.0" width="273" height="0.0"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="fAc-aU-tyk"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="fAc-aU-tyk" firstAttribute="trailing" secondItem="ci2-yD-PMo" secondAttribute="trailing" constant="90" id="6T4-oE-GOS"/>
+                            <constraint firstItem="ci2-yD-PMo" firstAttribute="top" secondItem="TXe-gR-Ock" secondAttribute="bottom" constant="40" id="cnF-9H-7RJ"/>
+                            <constraint firstItem="TXe-gR-Ock" firstAttribute="top" secondItem="fAc-aU-tyk" secondAttribute="top" constant="120" id="cpu-D7-tWJ"/>
+                            <constraint firstItem="TXe-gR-Ock" firstAttribute="leading" secondItem="fAc-aU-tyk" secondAttribute="leading" constant="60" id="dyf-Hv-iKj"/>
+                            <constraint firstItem="ci2-yD-PMo" firstAttribute="leading" secondItem="fAc-aU-tyk" secondAttribute="leading" constant="90" id="sDQ-Pv-Hk1"/>
+                            <constraint firstItem="fAc-aU-tyk" firstAttribute="trailing" secondItem="TXe-gR-Ock" secondAttribute="trailing" constant="60" id="z7d-0n-eQg"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="messageLabel" destination="r0B-Ze-LqX" id="7nI-I0-R7e"/>
+                        <outlet property="rateTextField" destination="Q23-6a-asj" id="BVA-L3-tij"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A1m-7s-GSy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="953" y="-22"/>
+        </scene>
     </scenes>
     <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

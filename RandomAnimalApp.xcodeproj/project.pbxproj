@@ -13,6 +13,7 @@
 		ABF1E3D42932CC5B00A73AAD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABF1E3D22932CC5B00A73AAD /* Main.storyboard */; };
 		ABF1E3D62932CC6200A73AAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABF1E3D52932CC6200A73AAD /* Assets.xcassets */; };
 		ABF1E3D92932CC6200A73AAD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABF1E3D72932CC6200A73AAD /* LaunchScreen.storyboard */; };
+		ABF1E3E12932D7F400A73AAD /* RateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF1E3E02932D7F400A73AAD /* RateViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		ABF1E3D52932CC6200A73AAD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ABF1E3D82932CC6200A73AAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ABF1E3DA2932CC6200A73AAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ABF1E3E02932D7F400A73AAD /* RateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				ABF1E3D52932CC6200A73AAD /* Assets.xcassets */,
 				ABF1E3D72932CC6200A73AAD /* LaunchScreen.storyboard */,
 				ABF1E3DA2932CC6200A73AAD /* Info.plist */,
+				ABF1E3E02932D7F400A73AAD /* RateViewController.swift */,
 			);
 			path = RandomAnimalApp;
 			sourceTree = "<group>";
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABF1E3D12932CC5B00A73AAD /* RandomAnimalViewController.swift in Sources */,
+				ABF1E3E12932D7F400A73AAD /* RateViewController.swift in Sources */,
 				ABF1E3CD2932CC5B00A73AAD /* AppDelegate.swift in Sources */,
 				ABF1E3CF2932CC5B00A73AAD /* SceneDelegate.swift in Sources */,
 			);
