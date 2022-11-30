@@ -13,8 +13,7 @@ class RandomAnimalViewController: UIViewController {
     @IBOutlet weak var animalImageView: UIImageView!
     @IBOutlet weak var animalLabel: UILabel!
     
-    static let animals: [String] = ["Perro","Gato","Caballo","Hormiga","Ballena","Paloma"]
-    var randomAnimal = Int.random(in: 0...RandomAnimalViewController.animals.count-1)
+    let animals: [String] = ["Perro","Gato","Caballo","Hormiga","Ballena","Paloma"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,9 +22,17 @@ class RandomAnimalViewController: UIViewController {
     
     
     private func setUI(){
-        animalLabel.text = RandomAnimalViewController.animals[randomAnimal]
-        animalImageView.image = UIImage(named: RandomAnimalViewController.animals[randomAnimal])
+        let animal = getAnimal()
+        animalLabel.text = animal
+        animalImageView.image = UIImage(named: animal)
+    }
+    
+    private func getAnimal() -> String {
+        return animals[getRandomAnimal()]
     }
 
+    private func getRandomAnimal() -> Int {
+        return Int.random(in: 0...animals.count-1)
+    }
 }
 
